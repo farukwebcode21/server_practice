@@ -1,16 +1,11 @@
 const express = require("express");
 const cors = require("cors");
-const dotenv = require("dotenv");
 const morgan = require("morgan");
 const createError = require("http-errors");
+const userRouter = require("./routers/userRouter");
 
 // Initialized express
 const app = express();
-
-dotenv.config();
-
-const host = process.env.DB_HOST;
-const port = process.env.SERVER_PORT || 3001;
 
 app.use(morgan("dev"));
 
@@ -18,9 +13,9 @@ app.use(morgan("dev"));
 app.use(cors());
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.status(200).send({ message: "Server is running" });
-});
+// user routers
+
+app.use("/api/users", userRouter);
 
 // Client serror
 app.use((req, res, next) => {
@@ -35,4 +30,4 @@ app.use((err, req, res, next) => {
   });
 });
 
-module.exports = { app, port, host };
+module.exports = app;
