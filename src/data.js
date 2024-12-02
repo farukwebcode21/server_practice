@@ -1,0 +1,50 @@
+const data = {
+  users: [
+    {
+      name: "John Doe",
+      email: "john.doe@example.com",
+      age: 28,
+      password: "password123",
+      address: "123 Elm Street, Springfield",
+      phone: "123-456-7890",
+      isAdmin: false,
+    },
+    {
+      name: "Jane Smith",
+      email: "jane.smith@example.com",
+      age: 35,
+      password: "password123",
+      address: "456 Oak Avenue, Metropolis",
+      phone: "987-654-3210",
+      isAdmin: true,
+    },
+    {
+      name: "Alice Johnson",
+      email: "alice.johnson@example.com",
+      age: 24,
+      password: "12345678",
+      address: "789 Pine Road, Gotham",
+      phone: "555-123-4567",
+      isAdmin: false,
+    },
+    {
+      name: "Bob Brown",
+      email: "bob.brown@example.com",
+      age: 42,
+      password: "12345678",
+      address: "101 Maple Lane, Star City",
+      phone: "333-444-5555",
+      isAdmin: true,
+    },
+    {
+      name: "Charlie Green",
+      email: "charlie.green@example.com",
+      age: 30,
+      password: "12345678",
+      address: "202 Cedar Way, Central City",
+      phone: "111-222-3333",
+      isAdmin: false,
+    },
+  ],
+};
+module.exports = data;

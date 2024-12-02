@@ -3,6 +3,7 @@ const cors = require("cors");
 const morgan = require("morgan");
 const createError = require("http-errors");
 const userRouter = require("./routers/userRouter");
+const seedRouter = require("./routers/seedRouter");
 
 // Initialized express
 const app = express();
@@ -12,6 +13,10 @@ app.use(morgan("dev"));
 // middleware
 app.use(cors());
 app.use(express.json());
+
+// seed route
+
+app.use("/api/seed", seedRouter);
 
 // user routers
 
